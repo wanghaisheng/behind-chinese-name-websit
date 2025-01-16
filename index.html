@@ -1,132 +1,732 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="keywords" content="mobile, simulator, mobile design, mobile app">
-  <meta name="author" content="Your Name or Company">
-  <meta http-equiv="Content-Language" content="en">
-
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.yourwebsite.com/pc-simulator" />
-
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="PC Simulator">
-  <meta property="og:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta property="og:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/pc-simulator">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PC Simulator">
-  <meta name="twitter:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y) {
-      window.clarity=window.clarity||function(){(clarity.q=clarity.q||[]).push(arguments)};
-      clarity('set', 'anonymizeIP', true);
-      i=l.createElement('script');i.async=1;i.src=r;i.type='text/javascript';
-      t=l.getElementsByTagName('script')[0];t.parentNode.insertBefore(i,t);
-    })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
-  </script>
-
-  <title>PC Simulator</title>
-
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .mobile-container {
-      width: 360px;
-      height: 640px;
-      border: 16px solid black;
-      border-radius: 16px;
-      background-color: #fff;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    /* Adjustments for PC */
-    @media (min-width: 768px) {
-      .mobile-container {
-        width: 600px;
-        height: 1000px;
-      }
-
-      .content {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .mobile-container {
-        width: 800px;
-        height: 1400px;
-      }
-
-      .content {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Additional responsiveness for larger screens */
-    @media (min-width: 1200px) {
-      body {
-        justify-content: flex-start;
-      }
-
-      .mobile-container {
-        margin-top: 50px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>中文名字生成器 | Chinese Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <div class="mobile-container">
-    <div class="content">
-      <p>Mobile Simulator Screen</p>
-      <p>PC Version: Adjusted for larger screens.</p>
-    </div>
-  </div>
-</body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="hero-title">🀄️ 探索你的中文名字 Discover Your Chinese Name</h1>
+                    <p class="hero-subtitle">
+                        一个独特的中文名字不仅仅是名字，它是文化、个性和梦想的交汇点。
+                        A unique Chinese name is more than just a name - it's a confluence of culture, personality, and dreams.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-image">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="animated-svg">
+                            <path d="M250,50 Q400,200 250,350 Q100,200 250,50" fill="#f0f0f0" stroke="#333" stroke-width="3"/>
+                            <text x="250" y="250" text-anchor="middle" font-size="100" fill="#333">名</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Name Generator Section -->
+    <section class="name-generator-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>🀄️ 中文名字生成器 Chinese Name Generator</h1>
+                    
+                    <form id="name-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="original-name">原始英文名 (Original Name)</label>
+                                    <input type="text" id="original-name" required placeholder="例如: John Smith">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="personality">性格特点 (Personality Traits)</label>
+                                    <select id="personality" multiple>
+                                        <option value="智慧">智慧 (Wise)</option>
+                                        <option value="勇敢">勇敢 (Brave)</option>
+                                        <option value="温和">温和 (Gentle)</option>
+                                        <option value="热情">热情 (Passionate)</option>
+                                        <option value="创新">创新 (Innovative)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="family-background">家族背景 (Family Background)</label>
+                                    <textarea id="family-background" placeholder="例如: 祖先是航海家"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="interests">兴趣爱好 (Interests)</label>
+                                    <select id="interests" multiple>
+                                        <option value="绘画">绘画 (Painting)</option>
+                                        <option value="音乐">音乐 (Music)</option>
+                                        <option value="运动">运动 (Sports)</option>
+                                        <option value="科技">科技 (Technology)</option>
+                                        <option value="旅行">旅行 (Travel)</option>
+                                        <option value="文学">文学 (Literature)</option>
+                                        <option value="艺术">艺术 (Art)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="culture-preference">文化偏好 (Cultural Preference)</label>
+                                    <select id="culture-preference">
+                                        <option value="传统">传统 (Traditional)</option>
+                                        <option value="现代">现代 (Modern)</option>
+                                        <option value="融合">融合 (Fusion)</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit">生成中文名 Generate Name</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div id="result" class="result-container">
+                        <div class="result-display">
+                            <!-- Name Options -->
+                            <div class="name-options">
+                                <div class="options-header">
+                                    <h3>名字方案 Name Options</h3>
+                                    <p class="options-intro">Based on your input, we've generated several name options in different styles:</p>
+                                </div>
+
+                                <!-- Classical Style Names -->
+                                <div class="name-style-section classical-names">
+                                    <h4><i class="fas fa-landmark"></i> 古典风格 Classical Style</h4>
+                                    <div class="names-grid">
+                                        <!-- Each name option -->
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">田耕</span>
+                                                <span class="name-pinyin">Tián Gēng</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Field Plow</div>
+                                                <p class="name-explanation">References family's farming history and implies diligence and connection to earth</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">史策</span>
+                                                <span class="name-pinyin">Shǐ Cè</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Historical Strategy</div>
+                                                <p class="name-explanation">Emphasizes strategic nature by referencing Chinese historians</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">李毅</span>
+                                                <span class="name-pinyin">Lǐ Yì</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Plum Determination</div>
+                                                <p class="name-explanation">Combines common surname with word meaning 'resolve'</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modern Style Names -->
+                                <div class="name-style-section modern-names">
+                                    <h4><i class="fas fa-city"></i> 现代风格 Modern Style</h4>
+                                    <div class="names-grid">
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">田野</span>
+                                                <span class="name-pinyin">Tián Yě</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Open Field</div>
+                                                <p class="name-explanation">Combines nature and openness, references love for nature and gardening</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add more modern name options -->
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">史明</span>
+                                                <span class="name-pinyin">Shǐ Míng</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Historical Brilliance</div>
+                                                <p class="name-explanation">Suggests intelligence and a bright future</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">李阳</span>
+                                                <span class="name-pinyin">Lǐ Yáng</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Plum Sunlight</div>
+                                                <p class="name-explanation">Implies positive and vibrant personality</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Creative Style Names -->
+                                <div class="name-style-section creative-names">
+                                    <h4><i class="fas fa-lightbulb"></i> 创意风格 Creative Style</h4>
+                                    <div class="names-grid">
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">田弈</span>
+                                                <span class="name-pinyin">Tián Yì</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Field Strategy</div>
+                                                <p class="name-explanation">Combines farming with chess strategy</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">史博</span>
+                                                <span class="name-pinyin">Shǐ Bó</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Historical Broadness</div>
+                                                <p class="name-explanation">References deep love of reading and knowledge</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="name-option">
+                                            <div class="name-header">
+                                                <span class="name-characters">李恒</span>
+                                                <span class="name-pinyin">Lǐ Héng</span>
+                                            </div>
+                                            <div class="name-details">
+                                                <div class="meaning-tag">Plum Constancy</div>
+                                                <p class="name-explanation">Emphasizes steadfast and dependable personality</p>
+                                            </div>
+                                            <div class="name-actions">
+                                                <button class="action-btn analyze-btn"><i class="fas fa-search"></i> Analyze</button>
+                                                <button class="action-btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cultural Considerations -->
+                            <div class="cultural-considerations">
+                                <h4><i class="fas fa-exclamation-circle"></i> 文化考量 Cultural Considerations</h4>
+                                <div class="considerations-list">
+                                    <div class="consideration-item">
+                                        <h5>禁忌 Taboos</h5>
+                                        <p>不能犯忌讳，例如在中国文化中有特殊含义的不吉利的字不能使用。</p>
+                                    </div>
+                                    <div class="consideration-item">
+                                        <h5>八字 Eight Characters</h5>
+                                        <p>不能违反中国传统生辰八字不好的点。</p>
+                                    </div>
+                                    <div class="consideration-item">
+                                        <h5>贬义 Derogatory</h5>
+                                        <p>不要使用那些会被大家轻视的词语。</p>
+                                    </div>
+                                    <div class="consideration-item">
+                                        <h5>避免 Avoid</h5>
+                                        <p>避免使用复杂难写、难发音的生僻字。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Name Analysis Section -->
+    <section id="advanced-analysis" class="advanced-analysis-section">
+        <div class="container">
+            <h2>深度名字分析 Advanced Name Analysis</h2>
+            
+            <div class="analysis-navigation">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-tab="linguistic">
+                        <i class="fas fa-language"></i>
+                        <span>音韵分析<br>Linguistic</span>
+                    </button>
+                    <button class="nav-tab" data-tab="cultural">
+                        <i class="fas fa-monument"></i>
+                        <span>文化内涵<br>Cultural</span>
+                    </button>
+                    <button class="nav-tab" data-tab="semantic">
+                        <i class="fas fa-network-wired"></i>
+                        <span>性格特征<br>Character Traits</span>
+                    </button>
+                    <button class="nav-tab" data-tab="modern">
+                        <i class="fas fa-city"></i>
+                        <span>其他建议<br>Other Recommendations</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-content">
+                <!-- Linguistic Analysis Panel -->
+                <div id="linguistic" class="tab-content active">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>声韵分析 Phonetic Analysis</h3>
+                            <div class="metrics-display">
+                                <div class="metric-item">
+                                    <span class="label">声母 Initials</span>
+                                    <div class="value" id="initials">姓：t, 名：g</div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="label">韵母 Finals</span>
+                                    <div class="value" id="finals">姓：ian, 名：eng</div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="label">声调 Tones</span>
+                                    <div class="value" id="tones">姓：2声, 名：1声</div>
+                                </div>
+                            </div>
+                            <div class="flow-analysis">
+                                <h4>音节流畅性 Phonetic Flow</h4>
+                                <p id="flow-analysis">该名字的音节中，姓氏的声母是t，名字的声母依次为g。在发音上，声母之间的过渡比较自然。音韵搭配影响听觉美感。该名字的音节中，姓氏的韵母是ian，名字的韵母依次为eng。韵母之间的发音衔接整体流畅。韵母发音的搭配决定了名字读起来是否优美。该名字的音节中，姓氏的声调是2。名字的声调依次为1。声调的组合使得名字在读起来时有起伏，富有韵律感。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h3>笔画分析 Stroke Analysis</h3>
+                            <div class="metrics-display">
+                                <div class="metric-item">
+                                    <span class="label">姓氏笔画 Surname Strokes</span>
+                                    <span class="value" id="surname-strokes">5画</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="label">名字笔画 Given Name Strokes</span>
+                                    <span class="value" id="given-name-strokes">10画</span>
+                                </div>
+                            </div>
+                            <div class="writing-complexity">
+                                <h4>书写难易度 Writing Complexity</h4>
+                                <p id="writing-complexity">该名字中，姓氏的笔画数为5，名字的笔画数依次为10。书写上，建议注意字的结构，使之整体协调。该名字整体笔画数中等，书写难度适中。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Analysis Panel -->
+                <div id="cultural" class="tab-content">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>文化寓意 Cultural Significance</h3>
+                            <div class="character-meanings" id="cultural-meanings">
+                                <div class="meaning-item">
+                                    <h4>"田"的寓意</h4>
+                                    <p>田字，表示耕地、田地，象征着朴实，勤劳和脚踏实地的品质。也指农业，或与土地相关。</p>
+                                </div>
+                                <div class="meaning-item">
+                                    <h4>"耕"的寓意</h4>
+                                    <p>耕字代表耕作、劳作，象征着勤奋，努力和不懈的追求。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h3>典故引用 Historical References</h3>
+                            <div class="historical-references" id="historical-references">
+                                <div class="reference-item">
+                                    <h4>"田"的典故</h4>
+                                    <p>田野，寓意朴实，也代表农业的根基，是人类赖以生存的基础。</p>
+                                </div>
+                                <div class="reference-item">
+                                    <h4>"耕"的典故</h4>
+                                    <p>耕耘，比喻辛勤劳动、努力奋斗。例如，古代的诗人常描写田间耕作的辛苦。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Traits Panel -->
+                <div id="semantic" class="tab-content">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>性格特征分析 Character Analysis</h3>
+                            <div class="traits-analysis">
+                                <p id="character-traits">该名字由姓氏'田'和名字'耕'组成。姓氏可能暗示与农业有关, 名字可能暗示勤奋和努力。名字往往寄托对孩子的期望，如"慧"寓意智慧，"勇"寓意勇敢, "宁"寓意平静。</p>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h3>错误检查 Error Checking</h3>
+                            <div class="error-checks">
+                                <ul class="check-list" id="error-checks">
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>缺少姓氏</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>语音修辞</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>书写复杂</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>寓意单一</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>完全音译</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>历史名人</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>昵称混淆</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>非正向谐音</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>与性别不符</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>消极负面意义的字</span>
+                                    </li>
+                                    <li class="check-item no-error">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>生僻字</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Recommendations Panel -->
+                <div id="modern" class="tab-content">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>五行八字分析 Five Elements Analysis</h3>
+                            <div class="five-elements">
+                                <p id="five-elements">名字中的字五行属性为：田，五行属土。耕，五行属土。结合五行八字来选择名字，是一种结合了中国传统命理学和命名习俗的方法。</p>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h3>国际化考虑 International Considerations</h3>
+                            <div class="international-usage">
+                                <p id="international-considerations">该名字的国际化考虑，包括：'田'字在国际环境中，拼音为tian，发音上较为简单，容易接受。'耕'字在国际环境中，拼音为geng，发音上较为简单，容易接受。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Card -->
+                <div class="summary-card">
+                    <h3>综合评价 Overall Assessment</h3>
+                    <div class="summary-content">
+                        <p id="overall-assessment">整体来看，该名字田耕，音韵流畅，易于书写，具有一定的文化内涵，适合作为中文名字使用。可以根据个人的具体情况，考虑进一步的修改或完善。名字的选择还需考虑家族传统,如字辈等。同时, 名字的流行趋势也应该考虑，如近期流行的"子涵"，"雨辰"等名字。还要考虑个人偏好。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Card -->
+            <div class="summary-card">
+                <h3>综合评价 Overall Assessment</h3>
+                <div class="summary-content">
+                    <p id="overall-assessment">整体来看，该名字田耕，音韵流畅，易于书写，具有一定的文化内涵，适合作为中文名字使用。可以根据个人的具体情况，考虑进一步的修改或完善。名字的选择还需考虑家族传统,如字辈等。同时, 名字的流行趋势也应该考虑，如近期流行的"子涵"，"雨辰"等名字。还要考虑个人偏好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Inspiration Section -->
+    <section id="name-inspiration" class="name-inspiration-section">
+        <div class="container">
+            <h2 class="section-title">灵感来源 Name Inspiration</h2>
+            <div class="inspiration-categories">
+                <div class="category-grid">
+                    <div class="inspiration-category" data-category="nature">
+                        <div class="category-icon">🌿</div>
+                        <h3>自然 Nature</h3>
+                        <div class="category-examples"></div>
+                    </div>
+                    
+                    <div class="inspiration-category" data-category="culture">
+                        <div class="category-icon">📚</div>
+                        <h3>文化 Culture</h3>
+                        <div class="category-examples"></div>
+                    </div>
+                    
+                    <div class="inspiration-category" data-category="virtues">
+                        <div class="category-icon">✨</div>
+                        <h3>品德 Virtues</h3>
+                        <div class="category-examples"></div>
+                    </div>
+                    
+                    <div class="inspiration-category" data-category="aspirations">
+                        <div class="category-icon">🎯</div>
+                        <h3>志向 Aspirations</h3>
+                        <div class="category-examples"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Visualization Section -->
+    <section id="character-visualization" class="visualization-section">
+        <div class="container">
+            <h2 class="section-title">汉字书写 Character Writing</h2>
+            <div class="visualization-container">
+                <canvas id="stroke-order-canvas" width="400" height="400"></canvas>
+                <div class="visualization-controls">
+                    <div class="control-buttons">
+                        <button id="play-strokes" class="control-btn play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="pause-strokes" class="control-btn pause-btn">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button id="reset-strokes" class="control-btn reset-btn">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                    <div class="stroke-order-display"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Context Section -->
+    <section id="historical-context" class="historical-section">
+        <div class="container">
+            <h2 class="section-title">历史渊源 Historical Context</h2>
+            <div class="historical-container">
+                <div class="historical-timeline"></div>
+                <div class="history-details"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meaning Explorer Section -->
+    <section id="meaning-explorer" class="meaning-section">
+        <div class="container">
+            <h2 class="section-title">字义探索 Character Meanings</h2>
+            <div class="meaning-explorer">
+                <div class="character-selection">
+                    <!-- Character selection will be populated by JavaScript -->
+                </div>
+                <div class="character-details"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="text-center mb-5">特色功能 Key Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>智能生成 Smart Generation</h3>
+                        <p>基于个性特征和文化背景智能生成中文名字。Intelligently generate Chinese names based on personality traits and cultural background.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>文化融合 Cultural Fusion</h3>
+                        <p>提供传统、现代和融合三种文化风格的名字选择。Offer name choices in traditional, modern, and fusion cultural styles.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>深度定制 Deep Personalization</h3>
+                        <p>根据个人兴趣、性格和家族背景定制独特名字。Customize unique names based on personal interests, personality, and family background.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <h2 class="text-center mb-5">如何使用 How It Works</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>输入信息 Input Details</h3>
+                        <p>填写原始英文名、性格特征和兴趣爱好。Fill in original name, personality traits, and interests.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>选择风格 Choose Style</h3>
+                        <p>选择文化偏好：传统、现代或融合。Select cultural preference: Traditional, Modern, or Fusion.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>生成名字 Generate Name</h3>
+                        <p>点击生成按钮，获取独特的中文名字。Click generate button to get a unique Chinese name.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>探索风格 Explore Styles</h3>
+                        <p>查看不同风格的名字变体。View different style variants of your name.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center mb-5">用户体验 User Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"这个生成器帮我找到了一个完美体现我性格的中文名！"</p>
+                        <div class="testimonial-author">- Sarah Johnson</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"对中国文化如此深入的理解，让我感到惊讶和感动。"</p>
+                        <div class="testimonial-author">- Michael Lee</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"不仅仅是一个名字生成器，更是一次文化之旅。"</p>
+                        <div class="testimonial-author">- Emily Chen</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="text-center mb-5">常见问题 Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+                                    这个名字生成器有多准确？
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    我们的生成器基于深入的语言学和文化研究，提供高度个性化和有意义的中文名字。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+                                    可以生成多种风格的名字吗？
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    是的！我们提供传统、现代和融合三种文化风格的名字生成。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+                                    名字的含义是如何确定的？
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    我们根据输入的性格特征、兴趣和背景，精心选择具有深意的汉字。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p> 2023 中文名字生成器 Chinese Name Generator. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>

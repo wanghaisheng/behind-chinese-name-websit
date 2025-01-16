@@ -1,7 +1,7 @@
 {
-  "name": "Mobile Simulator",
-  "short_name": "Simulator",
-  "description": "A mobile simulator designed to demonstrate mobile interface design.",
+  "name": "behind chinese name generator,checker,and report",
+  "short_name": "behind chinese name",
+  "description": "A chinese name generator,score checker and report tool.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

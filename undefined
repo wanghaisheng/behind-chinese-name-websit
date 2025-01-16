@@ -1,0 +1,5 @@
+.analysis-navigation .nav-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
